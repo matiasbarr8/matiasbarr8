@@ -1,15 +1,3 @@
-<div align="center">
-  <a href="https://www.linkedin.com/in/matias-barrientos2805/" target="_blank">
-    <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="linkedin logo"  />
-  </a>
-  <a href="https://www.instagram.com/tutebarrientos/" target="_blank">
-    <img src="https://img.shields.io/static/v1?message=Instagram&logo=instagram&label=&color=E4405F&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="instagram logo"  />
-  </a>
-  <a href="https://discordapp.com/users/592436952209293322" target="_blank">
-    <img src="https://img.shields.io/static/v1?message=Discord&logo=discord&label=&color=7289DA&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="discord logo"  />
-  </a>
-</div>
-
 ###
 
 <h1 align="center">Hola, Bienvenidos 👋</h1>
@@ -21,6 +9,26 @@
 ###
 
 <p align="left">Me llamo Matías, tengo 23 años y soy de Argentina.<br><br>- ​💻​ Actualmente trabajo como desarrollador y consultor en una empresa que desarrolla e implementa soluciones tecnológicas.<br>- 📚 Soy estudiante de la carrera "Técnico en Programación" en la Universidad Nacional de Hurlingham.</p>
+<h1></h1>
+
+###
+
+<h3 align="left">👤​ Contáctame</h3>
+
+###
+
+<div align="left">
+  <a href="https://www.linkedin.com/in/matias-barrientos2805/" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="linkedin logo"  />
+  </a>
+  <a href="mailto:matias.barrientos2805@gmail.com" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=Gmail&logo=gmail&label=&color=D14836&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="gmail logo"  />
+  </a>
+  <a href="https://discordapp.com/users/592436952209293322" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=Discord&logo=discord&label=&color=7289DA&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="discord logo"  />
+  </a>
+</div>
+<h1></h1>
 
 ###
 
