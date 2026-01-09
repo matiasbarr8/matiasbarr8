@@ -8,7 +8,7 @@
 
 ###
 
-<p align="left">Me llamo Matías, tengo 23 años y soy de Argentina.<br><br>- ​💻​ Actualmente trabajo como desarrollador y consultor en una empresa que desarrolla e implementa soluciones tecnológicas.<br>- 📚 Soy estudiante de la carrera "Técnico en Programación" en la Universidad Nacional de Hurlingham.</p>
+<p align="left">Me llamo Matías, tengo 23 años y soy de Argentina.<br><br>- ​💻​ Actualmente trabajo en una empresa que desarrolla e implementa soluciones tecnológicas.<br>- 📚 Soy estudiante de la carrera "Técnico en Programación" en la Universidad Nacional de Hurlingham.</p>
 <h1></h1>
 
 ###
