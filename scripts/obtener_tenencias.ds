@@ -1,72 +1,61 @@
 // Argumento de entrada: accountId (ID del registro de Accounts)
-// accountId = 1234567890; // Descomentar para probar con un ID específico
+// accountId = 1234567890;
 
-// 1. Inicializar la tabla HTML con encabezados y estilos básicos
-htmlTable = "<table border='1' cellpadding='5' cellspacing='0' style='border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;'>";
-htmlTable = htmlTable + "<thead style='background-color: #f2f2f2;'><tr>";
-htmlTable = htmlTable + "<th>Fecha</th>";
-htmlTable = htmlTable + "<th>Cuenta Comitente</th>";
-htmlTable = htmlTable + "<th>Instrumento</th>";
-htmlTable = htmlTable + "<th>Cantidad</th>";
-htmlTable = htmlTable + "<th>Valor en ARS</th>";
-htmlTable = htmlTable + "<th>Valor en USD</th>";
-htmlTable = htmlTable + "<th>Nombre de tenencia</th>";
-htmlTable = htmlTable + "</tr></thead><tbody>";
+tabla = "<record>";
 
-// 2. Obtener las "Cuentas Comitentes" relacionadas con la Cuenta (Accounts) dada
-// Nota: "Cuentas_Comitentes" debe ser el "API Name" de la Lista Relacionada en el módulo Accounts.
-// Si no funciona, verificar en Configuración > Módulos y Campos > Accounts > Listas Relacionadas.
+// Obtener las "Cuentas Comitentes" relacionadas
+// Nota: Verificar que "Cuentas_Comitentes" sea el API Name correcto
 cuentasRelacionadas = zoho.crm.getRelatedRecords("Cuentas_Comitentes", "Accounts", accountId);
 
-// Verificar si hubo un error o la lista está vacía (opcional, buena práctica)
 if (cuentasRelacionadas.size() > 0)
 {
-    // 3. Iterar sobre cada Cuenta Comitente encontrada
     for each cuenta in cuentasRelacionadas
     {
         cuentaId = cuenta.get("id");
-        // Asumiendo que el nombre de la cuenta comitente está en el campo "Name"
-        nombreCuentaComitente = cuenta.get("Name");
 
-        // 4. Obtener las "Tenencias" relacionadas con esta Cuenta Comitente específica
-        // Nota: "Tenencias_Nuevo" debe ser el "API Name" de la Lista Relacionada en el módulo Cuentas_Comitentes.
+        // Obtener las "Tenencias" relacionadas
+        // Nota: Verificar que "Tenencias_Nuevo" sea el API Name correcto
         tenenciasRelacionadas = zoho.crm.getRelatedRecords("Tenencias_Nuevo", "Cuentas_Comitentes", cuentaId);
 
-        // 5. Iterar sobre cada Tenencia encontrada
         for each tenencia in tenenciasRelacionadas
         {
-            // Obtener los valores de los campos. Usamos ifnull() para evitar errores si están vacíos.
-            // Es importante verificar los "API Names" exactos de los campos en el módulo Tenencias_Nuevo.
+            nombre = ifnull(tenencia.get("Name"),"-");
+            nombreId = tenencia.get("id");
+            fecha = ifnull(tenencia.get("Fecha"),"-");
 
-            fecha = ifnull(tenencia.get("Fecha"), "");
-            instrumento = ifnull(tenencia.get("Instrumento"), "");
+            cuentaComitente = "";
+            cuentaComitenteId = "";
+            if(tenencia.get("Cuenta_Comitente") != null)
+            {
+                cuentaComitente = tenencia.get("Cuenta_Comitente").get("name");
+                cuentaComitenteId = tenencia.get("Cuenta_Comitente").get("id");
+            }
+
+            nombreInstrumento = "";
+            nombreInstrumentoId = "";
+            if(tenencia.get("Instrumento") != null)
+            {
+                nombreInstrumento = tenencia.get("Instrumento").get("name");
+                nombreInstrumentoId = tenencia.get("Instrumento").get("id");
+            }
+
+            // Usamos ifnull para evitar errores si el campo está vacío
             cantidad = ifnull(tenencia.get("Cantidad"), "0");
-            valorArs = ifnull(tenencia.get("Valor_en_ARS"), "0");
-            valorUsd = ifnull(tenencia.get("Valor_en_USD"), "0");
-            nombreTenencia = ifnull(tenencia.get("Name"), "");
+            valorEnPesos = ifnull(tenencia.get("Importe_en_AR"), "0").toDecimal();
+            valorEnDolares = ifnull(tenencia.get("Total_en_USD"), "0").toDecimal();
 
-            // 6. Construir la fila de la tabla
-            htmlTable = htmlTable + "<tr>";
-            htmlTable = htmlTable + "<td>" + fecha + "</td>";
-            htmlTable = htmlTable + "<td>" + nombreCuentaComitente + "</td>";
-            htmlTable = htmlTable + "<td>" + instrumento + "</td>";
-            htmlTable = htmlTable + "<td>" + cantidad + "</td>";
-            htmlTable = htmlTable + "<td>" + valorArs + "</td>";
-            htmlTable = htmlTable + "<td>" + valorUsd + "</td>";
-            htmlTable = htmlTable + "<td>" + nombreTenencia + "</td>";
-            htmlTable = htmlTable + "</tr>";
+            tabla = tabla + "<row no=\"0\">";
+            tabla = tabla + "<FL val=\"Fecha\">" + fecha + "</FL>";
+            tabla = tabla + "<FL val=\"Cuenta Comitente\" link='true' url='http://crm.zoho.com/crm/org900533372/tab/CustomModule1/" + cuentaComitenteId + "'>" + cuentaComitente + "</FL>";
+            tabla = tabla + "<FL val=\"Instrumento\" link='true' url='http://crm.zoho.com/crm/org900533372/tab/CustomModule2/" + nombreInstrumentoId + "'>" + nombreInstrumento + "</FL>";
+            tabla = tabla + "<FL val=\"Cantidad\">" + cantidad + "</FL>";
+            tabla = tabla + "<FL val=\"Valor en ARS\">" + valorEnPesos + "</FL>";
+            tabla = tabla + "<FL val=\"Valor en USD\">" + valorEnDolares + "</FL>";
+            tabla = tabla + "<FL val=\"Nombre de Tenencia\" link='true' url='http://crm.zoho.com/crm/org900533372/tab/CustomModule3/" + nombreId + "'>" + nombre + "</FL>";
+            tabla = tabla + "</row>";
         }
     }
 }
-else
-{
-    // Mensaje opcional si no hay cuentas comitentes (se puede quitar si se prefiere tabla vacía)
-    // htmlTable = htmlTable + "<tr><td colspan='7'>No se encontraron cuentas comitentes asociadas.</td></tr>";
-}
 
-// 7. Cerrar la tabla
-htmlTable = htmlTable + "</tbody></table>";
-
-// 8. Retornar el resultado
-// info htmlTable; // Útil para depurar en la consola de Deluge
-return htmlTable;
+tabla = tabla + "</record>";
+return tabla;
