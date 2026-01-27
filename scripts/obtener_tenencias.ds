@@ -1,0 +1,67 @@
+string related_list.tenenciasDeLasCuentasComitentesEnClientes(Int clienteID)
+{
+    // Verificar el API Name de la Lista Relacionada.
+    cuentasRelacionadas = zoho.crm.getRelatedRecords("Cuentas_Comitentes", "Accounts", clienteID);
+
+    tabla = "<record>";
+
+    // Índice para las filas (Zoho requiere números de fila únicos a veces)
+    i = 0;
+
+    if(cuentasRelacionadas.size() > 0)
+    {
+        for each cuenta in cuentasRelacionadas
+        {
+            cuentaId = cuenta.get("id");
+
+            // Obtener tenencias. Verificar API Name "Tenencias_Nuevo".
+            tenenciasRelacionadas = zoho.crm.getRelatedRecords("Tenencias_Nuevo", "Cuentas_Comitentes", cuentaId);
+
+            for each tenencia in tenenciasRelacionadas
+            {
+                i = i + 1;
+
+                // Obtener valores y escapar caracteres especiales XML
+                nombre = ifnull(tenencia.get("Name"), "-").replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll("\"", "&quot;").replaceAll("'", "&apos;");
+                nombreId = tenencia.get("id");
+                fecha = ifnull(tenencia.get("Fecha"), "-");
+
+                cuentaComitente = "";
+                cuentaComitenteId = "";
+                if(tenencia.get("Cuenta_Comitente") != null)
+                {
+                    cuentaComitenteRaw = tenencia.get("Cuenta_Comitente").get("name");
+                    cuentaComitente = cuentaComitenteRaw.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll("\"", "&quot;").replaceAll("'", "&apos;");
+                    cuentaComitenteId = tenencia.get("Cuenta_Comitente").get("id");
+                }
+
+                nombreInstrumento = "";
+                nombreInstrumentoId = "";
+                if(tenencia.get("Instrumento") != null)
+                {
+                    nombreInstrumentoRaw = tenencia.get("Instrumento").get("name");
+                    nombreInstrumento = nombreInstrumentoRaw.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll("\"", "&quot;").replaceAll("'", "&apos;");
+                    nombreInstrumentoId = tenencia.get("Instrumento").get("id");
+                }
+
+                cantidad = ifnull(tenencia.get("Cantidad"), "0");
+                valorEnPesos = ifnull(tenencia.get("Importe_en_AR"), "0").toDecimal();
+                valorEnDolares = ifnull(tenencia.get("Total_en_USD"), "0").toDecimal();
+
+                // Usar índice dinámico 'i' para el número de fila
+                tabla = tabla + "<row no=\"" + i + "\">";
+                tabla = tabla + "<FL val=\"Fecha\">" + fecha + "</FL>";
+                tabla = tabla + "<FL val=\"Cuenta Comitente\" link='true' url='http://crm.zoho.com/crm/121construccin/tab/CustomModule1/" + cuentaComitenteId + "'>" + cuentaComitente + "</FL>";
+                tabla = tabla + "<FL val=\"Instrumento\" link='true' url='http://crm.zoho.com/crm/121construccin/tab/CustomModule2/" + nombreInstrumentoId + "'>" + nombreInstrumento + "</FL>";
+                tabla = tabla + "<FL val=\"Cantidad\">" + cantidad + "</FL>";
+                tabla = tabla + "<FL val=\"Valor en ARS\">" + valorEnPesos + "</FL>";
+                tabla = tabla + "<FL val=\"Valor en USD\">" + valorEnDolares + "</FL>";
+                tabla = tabla + "<FL val=\"Nombre de Tenencia\" link='true' url='http://crm.zoho.com/crm/121construccin/tab/CustomModule3/" + nombreId + "'>" + nombre + "</FL>";
+                tabla = tabla + "</row>";
+            }
+        }
+    }
+
+    tabla = tabla + "</record>";
+    return tabla;
+}
