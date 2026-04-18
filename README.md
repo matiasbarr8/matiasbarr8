@@ -47,8 +47,6 @@
   <img width="12" />
   <img src="https://www.zohowebstatic.com/sites/zweb/images/ogimage/flow-logo.png" height="40" alt="zoho flow logo"  />
   <img width="12" />
-  <img src="https://www.zohowebstatic.com/sites/zweb/images/ogimage/salesiq-logo.png" height="40" alt="zoho salesiq logo"  />
-  <img width="12" />
   <img src="https://www.zohowebstatic.com/sites/zweb/images/ogimage/contracts-logo.png" height="40" alt="zoho contracts logo"  />
   <img width="12" />
   <img src="https://make-cxp-documentation.ams3.cdn.digitaloceanspaces.com/apps-center-screenshots/zoho-sign_OAuth2" height="40" alt="zoho sign logo"  />
@@ -59,15 +57,17 @@
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="40" alt="css logo"  />
   <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" alt="javascript logo"  />
+  <img src="https://avatars.githubusercontent.com/u/16782098?s=200&v=4" height="40" alt="wollok logo"  />
   <img width="12" />
   <img src="https://pbs.twimg.com/profile_images/1923828294744489984/5S8jLDaB_400x400.jpg" height="40" alt="jules logo"  />
   <img width="12" />
   <img src="https://st5.depositphotos.com/32755884/69707/v/450/depositphotos_697076598-stock-illustration-chatgpt-sign-artificial-intelligence-chatbot.jpg" height="40" alt="chat gpt logo"  />
   <img width="12" />
-  <img src="https://play-lh.googleusercontent.com/p8R1lAZI5_WCOzmvBYnOQasCWcjc9d2vM7z4PaVku8b9AfxGhqQqM0ldJ8KULHblVj-g" height="40" alt="copilot logo"  />
+  <img src="https://its.unc.edu/wp-content/uploads/sites/337/2023/12/Microsoft_365_Copilot_Icon.png" height="40" alt="copilot logo"  />
   <img width="12" />
-  <img src="https://avatars.githubusercontent.com/u/16782098?s=200&v=4" height="40" alt="wollok logo"  />
+  <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" height="40" alt="git logo"  />
+  <img width="12" />
+  <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" height="40" alt="github logo"  />
   
 </div>
 
