@@ -66,6 +66,8 @@
   <img src="https://st5.depositphotos.com/32755884/69707/v/450/depositphotos_697076598-stock-illustration-chatgpt-sign-artificial-intelligence-chatbot.jpg" height="40" alt="chat gpt logo"  />
   <img width="12" />
   <img src="https://play-lh.googleusercontent.com/p8R1lAZI5_WCOzmvBYnOQasCWcjc9d2vM7z4PaVku8b9AfxGhqQqM0ldJ8KULHblVj-g" height="40" alt="copilot logo"  />
+  <img width="12" />
+  <img src="https://avatars.githubusercontent.com/u/16782098?s=200&v=4" height="40" alt="wollok logo"  />
   
 </div>
 
