@@ -45,8 +45,6 @@
   <img width="12" />
   <img src="https://www.zohowebstatic.com/sites/zweb/images/ogimage/analytics-logo.png" height="40" alt="zoho analytics logo"  />
   <img width="12" />
-  <img src="https://www.zohowebstatic.com/sites/zweb/images/ogimage/flow-logo.png" height="40" alt="zoho flow logo"  />
-  <img width="12" />
   <img src="https://www.zohowebstatic.com/sites/zweb/images/ogimage/contracts-logo.png" height="40" alt="zoho contracts logo"  />
   <img width="12" />
   <img src="https://make-cxp-documentation.ams3.cdn.digitaloceanspaces.com/apps-center-screenshots/zoho-sign_OAuth2" height="40" alt="zoho sign logo"  />
