@@ -61,13 +61,9 @@
   <img width="12" />
   <img src="https://pngimg.com/uploads/mysql/mysql_PNG23.png" height="40" alt="mysql logo"  />
   <img width="12" />
-  <img src="https://avatars.githubusercontent.com/u/16782098?s=200&v=4" height="40" alt="wollok logo"  />
-  <img width="12" />
   <img src="https://pbs.twimg.com/profile_images/1923828294744489984/5S8jLDaB_400x400.jpg" height="40" alt="jules logo"  />
   <img width="12" />
-  <img src="https://st5.depositphotos.com/32755884/69707/v/450/depositphotos_697076598-stock-illustration-chatgpt-sign-artificial-intelligence-chatbot.jpg" height="40" alt="chat gpt logo"  />
-  <img width="12" />
-  <img src="https://its.unc.edu/wp-content/uploads/sites/337/2023/12/Microsoft_365_Copilot_Icon.png" height="40" alt="copilot logo"  />
+  <img src="https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-avatar/avatars/openai.webp" height="40" alt="chat gpt logo"  />
   <img width="12" />
   <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" height="40" alt="git logo"  />
   <img width="12" />
