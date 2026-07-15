@@ -8,7 +8,7 @@
 
 ###
 
-<p align="left">Me llamo Matías, tengo 23 años y soy de Argentina.<br><br>- ​💻​ Actualmente trabajo en una empresa que desarrolla e implementa soluciones tecnológicas.<br>- 📚 Soy estudiante de la carrera "Técnico en Programación" en la Universidad Nacional de Hurlingham.</p>
+<p align="left">Me llamo Matías, tengo 24 años y soy de Argentina.<br><br>💻​ Actualmente trabajo como consultor y desarrollador en 121 Customer Tech.<br><br>⚙️ Especializado en el ecosistema Zoho. Con experiencia en CRM, Deluge, automatizaciones, APIs REST, OAuth 2.0, testing de APIs con Postman, integraciones con sistemas y plataformas externas. Orientado al análisis de requerimientos, la resolución de problemas y el desarrollo de soluciones adaptadas a las necesidades de cada proyecto.<br><br>🎓 Soy estudiante de la carrera "Técnico en Programación" en la Universidad Nacional de Hurlingham.</p>
 <h1></h1>
 
 ###
@@ -37,23 +37,29 @@
 ###
 
 <div align="left">
-  <img src="https://i.pinimg.com/736x/36/76/4c/36764cad429d97090de6e08a7ef82c7b.jpg" height="40" alt="zoho logo"  />
+  <img src="https://i.pinimg.com/736x/36/76/4c/36764cad429d97090de6e08a7ef82c7b.jpg" height="40" alt="Zoho logo"  />
   <img width="12" />
-  <img src="https://woztell.com/wp-content/uploads/2025/05/woztell-integration-zoho-crm.jpg" height="40" alt="zoho crm logo"  />
+  <img src="https://woztell.com/wp-content/uploads/2025/05/woztell-integration-zoho-crm.jpg" height="40" alt="Zoho CRM logo"  />
   <img width="12" />
-  <img src="https://www.zohowebstatic.com/sites/zweb/images/ogimage/deluge-logo.png" height="40" alt="zoho deluge logo"  />
+  <img src="https://www.zohowebstatic.com/sites/zweb/images/ogimage/deluge-logo.png" height="40" alt="Zoho Deluge logo"  />
   <img width="12" />
-  <img src="https://www.zohowebstatic.com/sites/zweb/images/ogimage/analytics-logo.png" height="40" alt="zoho analytics logo"  />
+  <img src="https://www.zohowebstatic.com/sites/zweb/images/ogimage/analytics-logo.png" height="40" alt="Zoho Analytics logo"  />
   <img width="12" />
-  <img src="https://www.zohowebstatic.com/sites/zweb/images/ogimage/contracts-logo.png" height="40" alt="zoho contracts logo"  />
+  <img src="https://www.zohowebstatic.com/sites/zweb/images/ogimage/contracts-logo.png" height="40" alt="Zoho Contracts logo"  />
   <img width="12" />
-  <img src="https://make-cxp-documentation.ams3.cdn.digitaloceanspaces.com/apps-center-screenshots/zoho-sign_OAuth2" height="40" alt="zoho sign logo"  />
+  <img src="https://make-cxp-documentation.ams3.cdn.digitaloceanspaces.com/apps-center-screenshots/zoho-sign_OAuth2" height="40" alt="Zoho Sign logo"  />
   <img width="12" />
-  <img src="https://www.zohowebstatic.com/sites/zweb/images/ogimage/one-logo.png" height="40" alt="zoho one logo"  />
+  <img src="https://www.zohowebstatic.com/sites/zweb/images/ogimage/one-logo.png" height="40" alt="Zoho One logo"  />
+  <img width="12" />
+  <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/postman-icon.png" height="40" alt="Postman logo"  />
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="40" alt="html5 logo"  />
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="40" alt="css logo"  />
+  <img width="12" />
+  <img src="https://images.icon-icons.com/2415/PNG/512/java_original_wordmark_logo_icon_146459.png" height="40" alt="java logo"  />
+  <img width="12" />
+  <img src="https://pngimg.com/uploads/mysql/mysql_PNG23.png" height="40" alt="mysql logo"  />
   <img width="12" />
   <img src="https://avatars.githubusercontent.com/u/16782098?s=200&v=4" height="40" alt="wollok logo"  />
   <img width="12" />
